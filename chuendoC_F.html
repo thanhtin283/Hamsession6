@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    chuyen độ C<input type="text" id="input" oninput="cole()" /> F:<span id="tinh"></span>
+</body>
+<script>
+    // function C(f)
+    // let tinh = (f - 32) / 1.8;
+    // return tinh;
+
+    function cole() {
+        let input1 = document.getElementById('input').value;
+        let tinh = (input1 - 32) / 1.8;
+        document.getElementById('tinh').innerHTML = tinh;
+    }
+</script>
+
+</html>
