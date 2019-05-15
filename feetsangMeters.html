@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    chuyen Feet : &ensp;<input type="text" id="input" oninput="feetToMeters()" />
+    </br> Sang Meters : <span id="meters"></span>
+    <br><br> chuyen Meters : &ensp;<input type="text" id="input1" oninput="metersToFeet()" />
+    </br> Sang Feet : <span id="feet"></span>
+</body>
+<script>
+    function feetToMeters() {
+        let foot = document.getElementById('input').value;
+        let meters = (foot * 0.305);
+        document.getElementById('meters').innerHTML = meters;
+    }
+
+    function metersToFeet() {
+        let meters = document.getElementById('input1').value;
+        let feet = (meters * 3.279);
+        document.getElementById('feet').innerHTML = feet;
+    }
+</script>
+
+</html>
