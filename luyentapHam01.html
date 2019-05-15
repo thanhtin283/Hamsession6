@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>bài 1</legend>
+        <button type="button" onclick="showmessage();">click me!</button>
+        <span id="result"></span>
+    </fieldset>
+    <fieldset>
+        <legend>bài 2</legend>
+        <input type="number" id="nhap">
+        <button type="button" onclick="tong();">kết quả</button>
+        <span id="result2"></span>
+    </fieldset>
+    <fieldset>
+        <legend>bài 3</legend>
+        <input type="text" id="nhap1">
+        <input type="text" id="nhap2">
+        <button type="button" onclick="tonghaiso();">kết quả</button>
+        <span id="result3"></span>
+    </fieldset>
+    <fieldset>
+        <legend>bài 5 tìm chòm sao của sao</legend>
+        <h5>Tên sao</h5>
+        <input type="text" id='tensao'>
+        <button type="button" onclick="saovachomsao();">kết quả</button>
+        <span id="result5"></span>
+    </fieldset>
+</body>
+<script>
+    function showmessage() {
+        document.getElementById('result').innerHTML = 'xin chào';
+    }
+
+    function tong() {
+        let nhap = parseInt(document.getElementById('nhap').value);
+        document.getElementById('result2').innerHTML = (nhap + 1);
+    }
+
+    function tonghaiso() {
+        let sothu1 = parseInt(document.getElementById('nhap1').value);
+        let sothu2 = parseInt(document.getElementById('nhap2').value);
+        if (sothu1 > sothu2) {
+            document.getElementById('result3').innerHTML = ' số ' + sothu1 + ' lớn hơn số ' + sothu2;
+        } else {
+            document.getElementById('result3').innerHTML = (sothu1 + sothu2);
+        }
+
+    }
+
+    let sao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let chomsao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function saovachomsao() {
+        let timkiem = document.getElementById('tensao').value;
+        for (let i = 0; i < sao.length; i++) {
+            if (timkiem === sao[i]) {
+                document.getElementById('result5').innerHTML = ' sao <b>' + sao[i] + '</b> thuộc chòm sao ' + '<b>' + (chomsao[i]) + '</b>';
+                break;
+            } else {
+                document.getElementById('result5').innerHTML = 'tên sao không đúng';
+            }
+        }
+
+    }
+</script>
+
+</html>
