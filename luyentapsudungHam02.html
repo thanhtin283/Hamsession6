@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>bài 1 tính bình phương của một số</legend>
+        <input type="number" id="nhap">
+        <button type="button" onclick="binhphuong();">kết quả</button>
+        <span id="result"></span>
+    </fieldset>
+    <fieldset>
+        <legend>bài 2 tính dien tích chu vi hình tròn</legend>
+        <input type="number" id="nhapbankinh">
+        <button type="button" onclick="sTron();"> Diên tích </button>
+        <span id="result2"></span>
+    </fieldset>
+</body>
+<script>
+    function tinh(number) {
+        let double = number * number;
+        return double;
+    }
+
+    function binhphuong() {
+        let nhap = parseInt(document.getElementById('nhap').value);
+        let double = tinh(nhap);
+        document.getElementById('result').innerHTML = double;
+    }
+
+    function tinhhinhtron(bankinh) {
+        const pi = 3.14;
+        let dientich = (bankinh * bankinh) * pi;
+        let chuvi = (bankinh * 2) * pi;
+        return dientich;
+    }
+
+    function sTron() {
+        let nhapbk = parseInt(document.getElementById('nhapbankinh').value);
+        let tinhS = tinhhinhtron(nhapbk);
+        document.getElementById('result2').innerHTML = ' Diện tích của hình tròn là ' + tinhS;
+    }
+</script>
+
+</html>
